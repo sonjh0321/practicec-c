@@ -1,6 +1,6 @@
 ﻿#include <stdio.h>
 int main()
 {
-	char a = 'A';
+	printf("rgm-79");
 	return 0;
 }
