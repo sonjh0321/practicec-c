@@ -2,15 +2,17 @@
 
 int main()
 {
-	char a = 'A';
-	char b[5] = "ABCD";
-	int c = 100;
-	double d = 123.4567;
+	int a, b;
+	double c, d;
 
-	printf("%5c %10s\n", a,b);
-	printf("%-5c %-10s\n", a, b);
-	printf("%5d %-5d\n", c, c);
-	printf("%0.3f\n", d);
+	printf("a = ");
+	scanf("%d", &a);
+	printf("b = ");
+	scanf("%d", &b);
 
+	c = ((a + b)*1.0) / 2 ;
+	d = (a + b) / 2.0;
+	printf("ave = %0.1f\n", c);
+	printf("ave = %0.1f\n", d);
 	return 0;
 }
