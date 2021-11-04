@@ -2,17 +2,13 @@
 
 int main()
 {
-	int a, b;
-	double c, d;
+	int gubum;
+	printf("주민번호첫번째 숫자를 입력하세요");
+	scanf("%d", &gubum);
 
-	printf("a = ");
-	scanf("%d", &a);
-	printf("b = ");
-	scanf("%d", &b);
+	if (1 == gubum || 3 == gubum) printf("남자입니다\n");
+	else if (2==gubum || 4==gubum) printf("여자입니다\n");
+	else printf("누구세요?\n");
 
-	c = ((a + b)*1.0) / 2 ;
-	d = (a + b) / 2.0;
-	printf("ave = %0.1f\n", c);
-	printf("ave = %0.1f\n", d);
 	return 0;
 }
