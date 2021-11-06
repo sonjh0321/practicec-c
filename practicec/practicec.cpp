@@ -1,15 +1,17 @@
 ﻿#include <stdio.h>
-#include <string.h>
+#include <ctype.h>
 int main()
 {
-	char A[] = "gundam rx79";
-	char* p;
+	char exp[7] = { "Gundam" };
+	int i;
 
-	p = strchr(A,'x');
-	if (p != NULL) printf("%s\n",p);
-
-	p = strstr(A, "rx79");
-	if (p != NULL) printf("%s\n",p);
+	printf("변경 전 %s\n",exp);
+	for (i = 0; i < 6; ++i)
+	{
+		if (islower(exp[i])) exp[i] = toupper(exp[i]);
+		else if (isupper(exp[i])) exp[i] = tolower(exp[i]);
+	}
+	printf("변경 후 %s",exp);
 
 	return 0;
 }
