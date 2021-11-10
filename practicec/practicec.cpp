@@ -1,13 +1,21 @@
 ﻿#include <stdio.h>
-#include <stdlib.h>
+int n = 10, m = 20;
+void s1()
+{
+	n = 20, m = 30;
+	return;
+}
+void s2()
+{
+	n = 30, m = 10;
+	return;
+}
 int main()
 {
-	system("cls");
-	system("date");
-	system("time");
-	system("ver");
-	exit(0);
-	system("cls");
-
+	printf("n= %d, m= %d\n",n,m);
+	s1();
+	printf("n= %d, m= %d\n", n, m);
+	s2();
+	printf("n= %d, m= %d\n", n, m);
 	return 0;
 }
