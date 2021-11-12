@@ -1,21 +1,15 @@
 ﻿#include <stdio.h>
-int n = 10, m = 20;
-void s1()
+void swap(int *x, int *y)
 {
-	n = 20, m = 30;
-	return;
-}
-void s2()
-{
-	n = 30, m = 10;
+	int t;
+	t = *x, * x = *y, * y = t;
 	return;
 }
 int main()
 {
-	printf("n= %d, m= %d\n",n,m);
-	s1();
-	printf("n= %d, m= %d\n", n, m);
-	s2();
-	printf("n= %d, m= %d\n", n, m);
+	int m = 10, n = 20;
+	printf("m=%d, n= %d\n",m,n);
+	swap(&m, &n);
+	printf("m=%d, n=%d\n",m,n);
 	return 0;
 }
