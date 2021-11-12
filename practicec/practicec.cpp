@@ -1,15 +1,19 @@
 ﻿#include <stdio.h>
-void swap(int *x, int *y)
+struct point
 {
-	int t;
-	t = *x, * x = *y, * y = t;
-	return;
+	int kor;
+	int eng;
+	int mat;
+}my_point;
+int total(point* ppoint)
+{
+	return ppoint->kor + ppoint->eng + ppoint->mat;
 }
 int main()
 {
-	int m = 10, n = 20;
-	printf("m=%d, n= %d\n",m,n);
-	swap(&m, &n);
-	printf("m=%d, n=%d\n",m,n);
+	my_point.kor = 85;
+	my_point.eng = 70;
+	my_point.mat = 100;
+	printf("총점 %d\n", total(&my_point));
 	return 0;
 }
