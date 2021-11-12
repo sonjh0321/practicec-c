@@ -1,19 +1,18 @@
 ﻿#include <stdio.h>
-struct point
+#include <limits.h>
+typedef struct mydb
 {
-	int kor;
-	int eng;
-	int mat;
-}my_point;
-int total(point* ppoint)
-{
-	return ppoint->kor + ppoint->eng + ppoint->mat;
-}
+	int num1;
+	int num2;
+}ilike;
 int main()
 {
-	my_point.kor = 85;
-	my_point.eng = 70;
-	my_point.mat = 100;
-	printf("총점 %d\n", total(&my_point));
+	ilike A;
+	typedef unsigned int ui;
+	A.num1 = 3;
+	A.num2 = 5;
+	printf("%d %d\n",A.num1,A.num2);
+	ui max = INT_MAX + INT_MAX + 1;
+	printf("%u\n",max);
 	return 0;
 }
