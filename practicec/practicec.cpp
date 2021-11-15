@@ -1,13 +1,14 @@
 ﻿#include <stdio.h>
+FILE * fin = fopen("input.txt", "r");
+FILE * fout = fopen("output.txt", "w");
 int main()
 {	
-	int a = 1, b = 2;
-	#define MUL(n,m) n*m
-	printf("곱 %d\n", MUL(a+b, a+b));
-	#undef MUL
-
-	#define MUL(n,m) (n)*(m)
-	printf("곱 %d\n",MUL(a+b,a+b));
-	#undef MUL
+	char c[81];
+	fgets(c,81,fin);
+	fputs(c,fout);
+	fputc('\n',fout);
+	fprintf(fout, "%s\n",c);
+	fclose(fin);
+	fclose(fout);
 	return 0;
 }
